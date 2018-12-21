@@ -1,1 +1,1 @@
-declare function start(): void;
+declare function initializeMUDjs(): void;
