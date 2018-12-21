@@ -1,0 +1,25 @@
+{
+  "name": "mudjs",
+  "version": "0.0.0",
+  "description": "An API For Building MUD Style Games",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calebeno/mudjs.git"
+  },
+  "author": "Caleb Eno",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/calebeno/mudjs/issues"
+  },
+  "homepage": "https://github.com/calebeno/mudjs#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "3.2.2"
+  }
+}
