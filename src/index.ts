@@ -1,4 +1,7 @@
-function initializeMUDjs() {
+import { MUDMaster, MUDMasterConfig } from './MUDMaster/MUDMaster';
+
+export function initializeMUDjs(config: MUDMasterConfig): MUDMaster {
+    let master = new MUDMaster(config);
     let title = `
 Initializing...
  ____________________________________
@@ -11,6 +14,10 @@ Initializing...
 |             by Caleb Eno           |
 |____________________________________|
 `;
-    console.log(title);
+    if (!config.disableTitleCard) {
+        console.log(title);
+    }
+    master.generateRoom();
+    return master;
 }
-initializeMUDjs();
+initializeMUDjs({});
