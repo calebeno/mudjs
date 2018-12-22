@@ -1,19 +1,19 @@
-import { MUDRoom } from '../MUDRoom/MUDRoom';
+import { MUDRoom } from '../MUDRoom/MUDRoom'
 
 export class MUDMaster {
-    constructor(private config: MUDMasterConfig) {}
+  constructor(private config: MUDMasterConfig) {}
 
-    generateRoom(): MUDRoom {
-        return new MUDRoom({});
-    }
+  generateRoom(): MUDRoom {
+    return new MUDRoom({})
+  }
 }
 
 export interface MUDMasterConfig {
-    disableTitleCard?: boolean,
-    roomStyle?: RoomStyle
+  disableTitleCard?: boolean
+  roomStyle?: RoomStyle
 }
 
 export enum RoomStyle {
-    directional = 'directional',
-    single = 'single'
+  directional = 'directional',
+  single = 'single'
 }
