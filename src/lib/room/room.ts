@@ -2,7 +2,8 @@
 // import { v4 as uuid } from 'uuid';
 
 // @ts-ignore
-import uuid = require('uuid');
+// import uuid = require('uuid');
+import uuid from 'uuid';
 
 // export function createRoom(config: MUDRoomConfig): room {
 export function createRoom(): Room {
