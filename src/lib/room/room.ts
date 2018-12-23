@@ -7,6 +7,7 @@ import uuid = require('uuid');
 // export function createRoom(config: MUDRoomConfig): room {
 export function createRoom(): Room {
     const roomID = uuid.v4();
+    // tslint:disable-next-line
     console.log(roomID);
     return {
         roomID

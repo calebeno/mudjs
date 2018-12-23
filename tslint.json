@@ -19,13 +19,14 @@
     "no-object-mutation": true,
     "no-delete": true,
     "no-method-signature": true,
+      "no-string-literal": false,
 
     // Functional style rules
     "no-this": true,
     "no-class": true,
     "no-mixed-interface": true,
     "no-expression-statement": [
-      true,
+      false,
       { "ignore-prefix": ["console.", "process.exit"] }
     ]
 //    "no-if-statement": true
