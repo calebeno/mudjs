@@ -12,3 +12,12 @@ build/docs
 coverage
 .nyc_output
 *.log
+.idea
+node_modules
+tools
+.editorconfig
+CHANGELOG.md
+code-of-conduct.md
+CONTRIBUTIING.md
+jest.config.js
+TEST.js
