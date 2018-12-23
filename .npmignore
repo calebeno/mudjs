@@ -18,6 +18,6 @@ tools
 .editorconfig
 CHANGELOG.md
 code-of-conduct.md
-CONTRIBUTIING.md
+CONTRIBUTING.md
 jest.config.js
 TEST.js
