@@ -5,22 +5,35 @@
 // import uuid = require('uuid');
 import uuid from 'uuid';
 
-// export function createRoom(config: MUDRoomConfig): room {
-export function createRoom(): Room {
+export function createShellRoom(x: number, y: number): MUDRoom {
     const roomID = uuid.v4();
-    // tslint:disable-next-line
-    console.log(roomID);
+    const info = {
+        roomID,
+        title: `Room at ${x}x${y}`,
+        description: `Room Description at ${x}x${y}`
+    };
+
+    function getRoomInfo(): MUDRoomInfo {
+        return info;
+    }
+    
     return {
-        roomID
+        info: getRoomInfo
     };
 }
 
-export interface Room {
-    roomID: string;
+export interface MUDRoomConfig {
+    roomStyle: RoomStyle;
 }
 
-export interface MUDRoomConfig {
-    dummyParam: string;
+export interface MUDRoomInfo {
+    roomID: string;
+    title: string;
+    description: string;
+}
+
+export interface MUDRoom {
+    readonly info: () => MUDRoomInfo;
 }
 
 export enum RoomStyle {

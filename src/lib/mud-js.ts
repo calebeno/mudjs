@@ -1,7 +1,7 @@
-import { createRoom, RoomStyle } from './room/room';
+import { MUDBuildGame, MUDGame, MUDGameConfig } from './game/game';
 
-export function initializeMUDjs(config: MUDMasterConfig): MUDMaster {
-    const title = `
+export function initializeNewMUDjs(config: MUDGameConfig): MUDGame {
+    const titleCard = `
 Initializing...
  ____________________________________
 |    _____ _____ ____     __ _____   |
@@ -15,20 +15,7 @@ Initializing...
 `;
     if (!config.disableTitleCard) {
         // tslint:disable-next-line
-        console.log(title);
+        console.log(titleCard);
     }
-    return {
-        config,
-        createRoom
-    };
-}
-
-export interface MUDMasterConfig {
-    disableTitleCard?: boolean
-    roomStyle?: RoomStyle
-}
-
-export interface MUDMaster {
-    config: MUDMasterConfig
-    createRoom: any
+    return MUDBuildGame(config);
 }
