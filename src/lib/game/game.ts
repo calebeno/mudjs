@@ -1,6 +1,5 @@
+import { MUDcreateLevel, MUDLevel, MUDRoomConfig } from '../..';
 import { handleError } from '../error-handler/error-handler';
-import { MUDcreateLevel, MUDLevel } from '../level/level';
-import { MUDRoomConfig } from '../room/room';
 
 export * from '../level/level';
 export * from '../room/room';
