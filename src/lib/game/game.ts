@@ -2,6 +2,9 @@ import { handleError } from '../error-handler/error-handler';
 import { MUDcreateLevel, MUDLevel } from '../level/level';
 import { MUDRoomConfig } from '../room/room';
 
+export * from '../level/level';
+export * from '../room/room';
+
 export function MUDBuildGame(config: MUDGameConfig): MUDGame {
     const levels: MUDLevel[] = [];
 

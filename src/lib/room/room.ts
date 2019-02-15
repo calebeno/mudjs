@@ -16,14 +16,14 @@ export function createShellRoom(x: number, y: number): MUDRoom {
     function getRoomInfo(): MUDRoomInfo {
         return info;
     }
-    
+
     return {
         info: getRoomInfo
     };
 }
 
 export interface MUDRoomConfig {
-    roomStyle: RoomStyle;
+    roomStyle: MUDRoomStyle;
 }
 
 export interface MUDRoomInfo {
@@ -36,7 +36,7 @@ export interface MUDRoom {
     readonly info: () => MUDRoomInfo;
 }
 
-export enum RoomStyle {
+export enum MUDRoomStyle {
     directional = 'directional',
     single = 'single'
 }
