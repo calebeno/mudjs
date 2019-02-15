@@ -1,6 +1,6 @@
 import { handleError } from '../error-handler/error-handler';
 import { MUDcreateLevel, MUDLevel } from '../level/level';
-import { MUDRoomInfo } from '../room/room';
+import { MUDRoomConfig } from '../room/room';
 
 export function MUDBuildGame(config: MUDGameConfig): MUDGame {
     const levels: MUDLevel[] = [];
@@ -51,7 +51,7 @@ export function MUDBuildGame(config: MUDGameConfig): MUDGame {
 
 export interface MUDGameConfig {
     disableTitleCard?: boolean
-    roomConfig: MUDRoomInfo
+    roomConfig: MUDRoomConfig
 }
 
 export interface MUDGame {
