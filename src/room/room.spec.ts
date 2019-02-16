@@ -1,5 +1,5 @@
 // @ts-ignore
-import uuid = require('uuid')
+import uuid from 'uuid'
 import { createShellRoom } from './room'
 
 test('first', () => {
