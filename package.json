@@ -1,6 +1,6 @@
 {
   "name": "mudjs",
-  "version": "0.0.0-development",
+  "version": "0.1.22-development",
   "description": "A library for making MUD type games.",
   "keywords": [],
   "main": "dist/mudjs.umd.js",
