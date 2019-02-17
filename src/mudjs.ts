@@ -4,9 +4,8 @@
 import { MUDBuildGame, MUDGame, MUDGameConfig } from './game/game'
 
 export default class MUD {
-    initializeNewMUDjs(config: MUDGameConfig): MUDGame {
+    constructor(config: MUDGameConfig) {
         const titleCard = `
-Initializing...
  ____________________________________
 |    _____ _____ ____     __ _____   |
 |   |     |  |  |    \\ __|  |   __|  |
@@ -21,6 +20,8 @@ Initializing...
             // tslint:disable-next-line
             console.log(titleCard)
         }
+    }
+    buildGame(config: MUDGameConfig): MUDGame {
         return MUDBuildGame(config)
     }
 }

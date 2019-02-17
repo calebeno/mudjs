@@ -1,6 +1,5 @@
-// @ts-ignore
-import uuid from 'uuid'
-import { createShellRoom } from './room'
+const uuid = require('uuid')
+import { createShellRoom } from '../src/room/room'
 
 test('first', () => {
     const mockUUID: string = 'abc-123'
