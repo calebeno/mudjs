@@ -7,20 +7,23 @@
 const uuid = require('uuid')
 // import { v4 as uuid } from 'uuid';
 
-export function createShellRoom(x: number, y: number): MUDRoom {
-    const roomID = uuid.v4()
-    const info = {
-        roomID,
-        title: `Room at ${x}x${y}`,
-        description: `Room Description at ${x}x${y}`
+export class MUDRoom {
+    get info() {
+        return {
+            id: this._roomID,
+            title: `Room at ${this._xCoordinate}x${this._yCoordinate}`,
+            description: `Room Description at ${this._xCoordinate}x${this._yCoordinate}`
+        }
     }
 
-    function getRoomInfo(): MUDRoomInfo {
-        return info
-    }
+    private _roomID: string
+    private _xCoordinate: number
+    private _yCoordinate: number
 
-    return {
-        info: getRoomInfo
+    constructor(private x: number, private y: number) {
+        this._roomID = uuid.v4()
+        this._xCoordinate = x
+        this._yCoordinate = y
     }
 }
 
@@ -32,10 +35,6 @@ export interface MUDRoomInfo {
     roomID: string
     title: string
     description: string
-}
-
-export interface MUDRoom {
-    readonly info: () => MUDRoomInfo
 }
 
 export enum MUDRoomStyle {

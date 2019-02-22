@@ -1,7 +1,7 @@
 // Import here Polyfills if needed. Recommended core-js (npm i -D core-js)
 // import "core-js/fn/array.find"
 // ...
-import { MUDBuildGame, MUDGame, MUDGameConfig } from './game/game'
+import { MUDGame, MUDGameConfig } from './game/game'
 
 export default class MUD {
     constructor(config: MUDGameConfig) {
@@ -22,6 +22,6 @@ export default class MUD {
         }
     }
     buildGame(config: MUDGameConfig): MUDGame {
-        return MUDBuildGame(config)
+        return new MUDGame(config)
     }
 }
