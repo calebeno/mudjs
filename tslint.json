@@ -4,5 +4,6 @@
     "tslint-config-prettier"
   ],
     "rules": {
+        "strict-type-predicates": false
     }
 }
