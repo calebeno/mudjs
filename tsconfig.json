@@ -9,14 +9,15 @@
             "es2017",
             "dom"
         ],
+        "resolveJsonModule": true,
         "strict": true,
         "sourceMap": true,
         "declaration": true,
         "allowSyntheticDefaultImports": true,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "declarationDir": "dist/types",
-        "outDir": "dist/lib",
+        "declarationDir": "types",
+        "outDir": "lib",
         "typeRoots": [
             "node_modules/@types"
         ]
