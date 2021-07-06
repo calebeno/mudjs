@@ -21,6 +21,7 @@ export default class MUD {
             console.log(titleCard)
         }
     }
+
     buildGame(config: MUDGameConfig): MUDGame {
         return new MUDGame(config)
     }

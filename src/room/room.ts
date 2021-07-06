@@ -1,11 +1,5 @@
-// import uuid from 'uuid'
-// import { v4 as uuid } from 'uuid';
-
-// @ts-ignore
-// import uuid = require('uuid');
-// import uuid from 'uuid';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const uuid = require('uuid')
-// import { v4 as uuid } from 'uuid';
 
 export class MUDRoom {
     get info() {

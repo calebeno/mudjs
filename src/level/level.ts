@@ -1,4 +1,4 @@
-const uuid = require('uuid')
+import { v4 as uuidv4 } from 'uuid';
 import { handleError } from '../error-handler/error-handler'
 import { MUDGameConfig } from '../game/game'
 import { MUDRoom } from '../room/room'
@@ -21,7 +21,7 @@ export class MUDLevel {
     private _rooms: MUDRoom[][]
 
     constructor(private config: MUDGameConfig, sizeX: number, sizeY: number) {
-        this._levelID = uuid.v4()
+        this._levelID = uuidv4()
         this._rooms = Array(sizeX)
             .fill(0)
             .map((_val, x) => {

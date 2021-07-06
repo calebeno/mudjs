@@ -2,8 +2,13 @@
     "transform": {
         ".(ts|tsx)": "ts-jest"
     },
+    "preset": "ts-jest/presets/default",
     "testEnvironment": "node",
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleDirectories": [
+        "node_modules",
+        "src"
+    ],
     "moduleFileExtensions": [
         "ts",
         "tsx",
@@ -23,5 +28,12 @@
     },
     "collectCoverageFrom": [
         "src/*.{js,ts}"
-    ]
+    ],
+    "globals": {
+        "ts-jest": {
+            "tsConfig": "./tsconfig.json",
+            "useESM": true
+        },
+        "NODE_ENV": "test"
+    }
 }

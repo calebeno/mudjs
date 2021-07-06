@@ -1,5 +1,9 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const uuid = require('uuid')
 import { MUDRoom, MUDRoomConfig, MUDRoomStyle } from '../src/room/room'
+
+jest.mock('uuid');
+const mockedUuid = uuid as jest.Mocked<typeof uuid>;
 
 describe('Room', () => {
     let config: MUDRoomConfig
@@ -11,11 +15,11 @@ describe('Room', () => {
     })
 
     test('first', () => {
-        const mockUUID: string = 'abc-123'
-        const v4Spy = jest.spyOn(uuid, 'v4').mockReturnValue(mockUUID as any)
+        const mockUUID = 'abc-123';
+        mockedUuid.v4.mockReturnValue(mockUUID);
 
-        const room = new MUDRoom(0, 0)
-        expect(room.info.id).toBe(mockUUID)
-        expect(v4Spy).toHaveBeenCalledTimes(1)
+        const room = new MUDRoom(0, 0);
+        expect(room.info.id).toBe(mockUUID);
+        expect(mockedUuid.v4).toHaveBeenCalledTimes(1);
     })
 })
