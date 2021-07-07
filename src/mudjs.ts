@@ -3,6 +3,9 @@
 // ...
 import { MUDGame, MUDGameConfig } from './game/game'
 
+/**
+ * Me adding just a simple doc note
+ */
 export default class MUD {
     constructor(config: MUDGameConfig) {
         const titleCard = `

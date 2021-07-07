@@ -9,7 +9,9 @@ install:
     - npm install
 script:
     - npm run test:prod
+    - npm run report-coverage
     - npm run build
+    - npm run deploy-docs
 #after_success:
 #  - npm run travis-deploy-once "npm run report-coverage"
 #  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then npm run travis-deploy-once "npm run deploy-docs"; fi
