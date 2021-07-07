@@ -1,8 +1,7 @@
 # MUDJS
 
-[![Build Status](https://travis-ci.org/calebeno/mudjs.svg?branch=master)](https://travis-ci.org/calebeno/mudjs)
+[![Build Status](https://travis-ci.com/calebeno/mudjs.svg?branch=master)](https://travis-ci.com/calebeno/mudjs)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![Travis](https://img.shields.io/travis/calebeno/mudjs.svg)](https://travis-ci.org/calebeno/mudjs)
 [![Coveralls](https://img.shields.io/coveralls/calebeno/mudjs.svg)](https://coveralls.io/github/calebeno/mudjs)
 
 [comment]: <> ([![Greenkeeper badge]&#40;https://badges.greenkeeper.io/calebeno/mudjs.svg&#41;]&#40;https://greenkeeper.io/&#41;)

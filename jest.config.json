@@ -27,12 +27,11 @@
         }
     },
     "collectCoverageFrom": [
-        "src/*.{js,ts}"
+        "src/**/*.{ts,js}"
     ],
     "globals": {
         "ts-jest": {
-            "tsConfig": "./tsconfig.json",
-            "useESM": true
+            "tsConfig": "./tsconfig.json"
         },
         "NODE_ENV": "test"
     }
