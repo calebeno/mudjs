@@ -4,7 +4,7 @@
 import { MUDGame, MUDGameConfig } from './game/game'
 
 /**
- * Me adding just a simple doc note
+ * Testing a remote change
  */
 export default class MUD {
     constructor(config: MUDGameConfig) {
