@@ -37,7 +37,7 @@
         "prepush": "npm run test:prod && npm run build",
         "commitmsg": "commitlint -E HUSKY_GIT_PARAMS",
         "prepare": "npm run build",
-        "prepublishOnly": "npm test:prod && npm run lint",
+        "prepublishOnly": "npm run test:prod && npm run lint",
         "preversion": "npm run lint",
         "version": "git add -A src",
         "postversion": "git push && git push --tags"
