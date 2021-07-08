@@ -1,17 +1,17 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const uuid = require('uuid')
-import { MUDRoom, MUDRoomConfig, MUDRoomStyle } from '../src/room/room'
+import { MUDRoom } from '../src/room/room'
 
 jest.mock('uuid');
 const mockedUuid = uuid as jest.Mocked<typeof uuid>;
 
 describe('Room', () => {
-    let config: MUDRoomConfig
+    // let config: MUDConfignfig
 
     beforeEach(() => {
-        config = {
-            roomStyle: MUDRoomStyle.single
-        }
+        // config = {
+        //     roomStyle: MUDRoomStyle.single
+        // }
     })
 
     test('first', () => {
