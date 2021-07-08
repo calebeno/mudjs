@@ -19,7 +19,7 @@ describe('Room', () => {
         mockedUuid.v4.mockReturnValue(mockUUID);
 
         const room = new MUDRoom(0, 0);
-        expect(room.info.id).toBe(mockUUID);
+        expect(room.info.roomID).toBe(mockUUID);
         expect(mockedUuid.v4).toHaveBeenCalledTimes(1);
     })
 })

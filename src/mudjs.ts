@@ -1,13 +1,17 @@
 // Import here Polyfills if needed. Recommended core-js (npm i -D core-js)
 // import "core-js/fn/array.find"
 // ...
-import { MUDGame, MUDGameConfig } from './game/game'
+import { MUDGame } from './game/game'
+import { MUDGameConfig } from "./interfaces/mud-game-config.interface";
 
-/**
- * Testing a remote change 5029348523-04598
- */
 export default class MUD {
+    public static MUDConfig: MUDGameConfig;
+    public static MUDGame: MUDGame;
+
     constructor(config: MUDGameConfig) {
+        MUD.MUDConfig = config;
+        MUD.MUDGame = new MUDGame();
+
         const titleCard = `
  ____________________________________
 |    _____ _____ ____     __ _____   |
@@ -21,11 +25,7 @@ export default class MUD {
 `
         if (!config.disableTitleCard) {
             // tslint:disable-next-line
-            console.log(titleCard)
+            console.log(titleCard);
         }
-    }
-
-    buildGame(config: MUDGameConfig): MUDGame {
-        return new MUDGame(config)
     }
 }

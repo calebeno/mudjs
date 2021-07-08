@@ -1,6 +1,7 @@
 # MUDJS
 
 [![Build Status](https://travis-ci.com/calebeno/mudjs.svg?branch=master)](https://travis-ci.com/calebeno/mudjs)
+[![Known Vulnerabilities](https://snyk.io/test/github/calebeno/mudjs/badge.svg)](https://snyk.io/test/github/calebeno/mudjs)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![Coveralls](https://img.shields.io/coveralls/calebeno/mudjs.svg)](https://coveralls.io/github/calebeno/mudjs)
 

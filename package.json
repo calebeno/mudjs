@@ -1,15 +1,14 @@
 {
     "name": "mudjs",
-    "version": "0.2.0",
+    "version": "0.2.3",
     "description": "A library for making MUD type games.",
     "keywords": [],
-    "main": "mudjs.umd.js",
-    "module": "mudjs.es5.js",
-    "typings": "types/mudjs.d.ts",
+    "main": "lib/mudjs.js",
+    "types": "lib/mudjs.d.ts",
     "files": [
-        "dist"
+        "lib/**/*"
     ],
-    "author": "Caleb Eno <caleb.eno@gmail.com>",
+    "author": "Caleb Eno",
     "repository": {
         "type": "git",
         "url": "https://github.com/calebeno/mudjs.git"
@@ -19,12 +18,12 @@
         "node": ">=12.0.0"
     },
     "scripts": {
-        "lint": "eslint . --ext .ts",
-        "prebuild": "rimraf dist",
+        "start": "tsc -p tsconfig.json -w",
+        "prebuild": "rimraf lib && rimraf docs",
         "build": "npm run build:library && npm run build:docs",
-        "build:library": "rollup -c rollup.config.ts",
+        "build:library": "tsc -p tsconfig.json",
         "build:docs": "typedoc --out docs --target es6 --theme minimal --mode file src",
-        "start": "rollup -c rollup.config.ts -w",
+        "lint": "eslint . --ext .ts",
         "test": "jest --coverage",
         "test:watch": "jest --coverage --watch",
         "test:prod": "npm run lint && npm run test -- --no-cache",
@@ -36,7 +35,12 @@
         "precommit": "lint-staged",
         "travis-deploy-once": "travis-deploy-once",
         "prepush": "npm run test:prod && npm run build",
-        "commitmsg": "commitlint -E HUSKY_GIT_PARAMS"
+        "commitmsg": "commitlint -E HUSKY_GIT_PARAMS",
+        "prepare": "npm run build",
+        "prepublishOnly" : "npm test:prod && npm run lint",
+        "preversion" : "npm run lint",
+        "version" : "git add -A src",
+        "postversion" : "git push && git push --tags"
     },
     "lint-staged": {
         "{src,test}/**/*.ts": [

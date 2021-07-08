@@ -1,29 +1,28 @@
-import { handleError } from '../error-handler/error-handler'
 import { MUDLevel } from '../level/level'
-import { MUDRoomConfig } from '../room/room'
+import { mudMessage, MUDMessagePriority } from "../utility/mud-messenger";
 
 export * from '../level/level'
 export * from '../room/room'
 
 export class MUDGame {
-    get config(): MUDGameConfig {
-        return this._config
-    }
-
-    get levels(): MUDLevel[] {
-        return this._levels
-    }
-
     private _levels: MUDLevel[] = []
 
-    constructor(private _config: MUDGameConfig) {}
+    get levelCount(): number {
+        return this._levels.length;
+    }
+
+    createLevel(name: string, width: number, height: number): MUDLevel {
+        const level = new MUDLevel(name, width, height);
+        this._levels.push(level);
+        return level;
+    }
 
     getLevel(id: number | string): MUDLevel | null {
         if (typeof id === 'number') {
             if (this._levels[id]) {
                 return this._levels[id]
             } else {
-                handleError(`Room not found with index ${id}`)
+                mudMessage(MUDMessagePriority.error, `Level not found with index ${id}`)
                 return null
             }
         }
@@ -33,23 +32,11 @@ export class MUDGame {
             if (levelMatch) {
                 return levelMatch
             } else {
-                // tslint:disable-next-line
-                handleError(`Room not found with identifier ${id}`)
+                mudMessage(MUDMessagePriority.error, `Level  not found with identifier ${id}`)
                 return null
             }
         }
-        handleError('No valid room identifier provided')
+        mudMessage(MUDMessagePriority.error, 'No valid room identifier provided')
         return null
     }
-
-    createLevel(x: number, y: number): MUDLevel {
-        const level = new MUDLevel(this.config, x, y)
-        this._levels.push(level)
-        return level
-    }
-}
-
-export interface MUDGameConfig {
-    disableTitleCard?: boolean
-    roomConfig: MUDRoomConfig
 }
