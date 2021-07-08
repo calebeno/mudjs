@@ -2723,6 +2723,9 @@ img {
 <nav class="tsd-navigation secondary">
 	<ul>
 		<li class=" tsd-kind-enum">
+			<a href="../enums/mudmessagepriority.html" class="tsd-kind-icon">MUDMessage<wbr>Priority</a>
+		</li>
+		<li class=" tsd-kind-enum">
 			<a href="../enums/mudroomstyle.html" class="tsd-kind-icon">MUDRoom<wbr>Style</a>
 		</li>
 		<li class="current tsd-kind-class">
@@ -2731,8 +2734,11 @@ img {
 				<li class=" tsd-kind-constructor tsd-parent-kind-class">
 					<a href="mud.html#constructor" class="tsd-kind-icon">constructor</a>
 				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class">
-					<a href="mud.html#buildgame" class="tsd-kind-icon">build<wbr>Game</a>
+				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a href="mud.html#mudconfig" class="tsd-kind-icon">MUDConfig</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a href="mud.html#mudgame" class="tsd-kind-icon">MUDGame</a>
 				</li>
 			</ul>
 		</li>
@@ -2752,28 +2758,18 @@ img {
 			<a href="../interfaces/mudlevelinfo.html" class="tsd-kind-icon">MUDLevel<wbr>Info</a>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="../interfaces/mudroomconfig.html" class="tsd-kind-icon">MUDRoom<wbr>Config</a>
-		</li>
-		<li class=" tsd-kind-interface">
 			<a href="../interfaces/mudroominfo.html" class="tsd-kind-icon">MUDRoom<wbr>Info</a>
 		</li>
 		<li class=" tsd-kind-variable">
 			<a href="../globals.html#uuid" class="tsd-kind-icon">uuid</a>
 		</li>
 		<li class=" tsd-kind-function">
-			<a href="../globals.html#handleerror" class="tsd-kind-icon">handle<wbr>Error</a>
+			<a href="../globals.html#mudmessage" class="tsd-kind-icon">mud<wbr>Message</a>
 		</li>
 	</ul>
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
-		<section class="tsd-panel tsd-comment">
-			<div class="tsd-comment tsd-typography">
-				<div class="lead">
-					<p>Testing a remote change 5029348523-04598</p>
-				</div>
-			</div>
-		</section>
 		<section class="tsd-panel tsd-hierarchy">
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
@@ -2793,9 +2789,10 @@ img {
 						</ul>
 					</section>
 					<section class="tsd-index-section ">
-						<h3>Methods</h3>
+						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-method tsd-parent-kind-class"><a href="mud.html#buildgame" class="tsd-kind-icon">build<wbr>Game</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="mud.html#mudconfig" class="tsd-kind-icon">MUDConfig</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="mud.html#mudgame" class="tsd-kind-icon">MUDGame</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2813,7 +2810,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/12d88e3/src/mudjs.ts#L9">mudjs.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/99b55c4/src/mudjs.ts#L9">mudjs.ts:9</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2828,29 +2825,26 @@ img {
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
-			<h2>Methods</h2>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-				<a name="buildgame" class="tsd-anchor"></a>
-				<h3>build<wbr>Game</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon">build<wbr>Game<span class="tsd-signature-symbol">(</span>config<span class="tsd-signature-symbol">: </span><a href="../interfaces/mudgameconfig.html" class="tsd-signature-type">MUDGameConfig</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="mudgame.html" class="tsd-signature-type">MUDGame</a></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/12d88e3/src/mudjs.ts#L28">mudjs.ts:28</a></li>
-							</ul>
-						</aside>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>config: <a href="../interfaces/mudgameconfig.html" class="tsd-signature-type">MUDGameConfig</a></h5>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <a href="mudgame.html" class="tsd-signature-type">MUDGame</a></h4>
-					</li>
-				</ul>
+			<h2>Properties</h2>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+				<a name="mudconfig" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagStatic">Static</span> MUDConfig</h3>
+				<div class="tsd-signature tsd-kind-icon">MUDConfig<span class="tsd-signature-symbol">:</span> <a href="../interfaces/mudgameconfig.html" class="tsd-signature-type">MUDGameConfig</a></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/99b55c4/src/mudjs.ts#L8">mudjs.ts:8</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+				<a name="mudgame" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagStatic">Static</span> MUDGame</h3>
+				<div class="tsd-signature tsd-kind-icon">MUDGame<span class="tsd-signature-symbol">:</span> <a href="mudgame.html" class="tsd-signature-type">MUDGame</a></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/99b55c4/src/mudjs.ts#L9">mudjs.ts:9</a></li>
+					</ul>
+				</aside>
 			</section>
 		</section>
 		<footer class="with-border-bottom">
@@ -2866,6 +2860,9 @@ img {
 					</ul>
 					<ul class="tsd-legend">
 						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+					</ul>
+					<ul class="tsd-legend">
+						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
 					</ul>
 				</div>
 			</div>

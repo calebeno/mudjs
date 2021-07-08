@@ -2723,6 +2723,9 @@ img {
 <nav class="tsd-navigation secondary">
 	<ul>
 		<li class=" tsd-kind-enum">
+			<a href="../enums/mudmessagepriority.html" class="tsd-kind-icon">MUDMessage<wbr>Priority</a>
+		</li>
+		<li class=" tsd-kind-enum">
 			<a href="../enums/mudroomstyle.html" class="tsd-kind-icon">MUDRoom<wbr>Style</a>
 		</li>
 		<li class=" tsd-kind-class">
@@ -2741,13 +2744,22 @@ img {
 					<a href="mudlevel.html#_levelid" class="tsd-kind-icon">_levelID</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a href="mudlevel.html#_rooms" class="tsd-kind-icon">_rooms</a>
+					<a href="mudlevel.html#_levelname" class="tsd-kind-icon">_level<wbr>Name</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a href="mudlevel.html#config" class="tsd-kind-icon">config</a>
+					<a href="mudlevel.html#_rooms" class="tsd-kind-icon">_rooms</a>
 				</li>
 				<li class=" tsd-kind-get-signature tsd-parent-kind-class">
 					<a href="mudlevel.html#info" class="tsd-kind-icon">info</a>
+				</li>
+				<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+					<a href="mudlevel.html#levelheight" class="tsd-kind-icon">level<wbr>Height</a>
+				</li>
+				<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+					<a href="mudlevel.html#levelwidth" class="tsd-kind-icon">level<wbr>Width</a>
+				</li>
+				<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+					<a href="mudlevel.html#roomcount" class="tsd-kind-icon">room<wbr>Count</a>
 				</li>
 				<li class=" tsd-kind-get-signature tsd-parent-kind-class">
 					<a href="mudlevel.html#rooms" class="tsd-kind-icon">rooms</a>
@@ -2770,16 +2782,13 @@ img {
 			<a href="../interfaces/mudlevelinfo.html" class="tsd-kind-icon">MUDLevel<wbr>Info</a>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="../interfaces/mudroomconfig.html" class="tsd-kind-icon">MUDRoom<wbr>Config</a>
-		</li>
-		<li class=" tsd-kind-interface">
 			<a href="../interfaces/mudroominfo.html" class="tsd-kind-icon">MUDRoom<wbr>Info</a>
 		</li>
 		<li class=" tsd-kind-variable">
 			<a href="../globals.html#uuid" class="tsd-kind-icon">uuid</a>
 		</li>
 		<li class=" tsd-kind-function">
-			<a href="../globals.html#handleerror" class="tsd-kind-icon">handle<wbr>Error</a>
+			<a href="../globals.html#mudmessage" class="tsd-kind-icon">mud<wbr>Message</a>
 		</li>
 	</ul>
 </nav>
@@ -2807,14 +2816,17 @@ img {
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="mudlevel.html#_levelid" class="tsd-kind-icon">_levelID</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="mudlevel.html#_levelname" class="tsd-kind-icon">_level<wbr>Name</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="mudlevel.html#_rooms" class="tsd-kind-icon">_rooms</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="mudlevel.html#config" class="tsd-kind-icon">config</a></li>
 						</ul>
 					</section>
 					<section class="tsd-index-section ">
 						<h3>Accessors</h3>
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="mudlevel.html#info" class="tsd-kind-icon">info</a></li>
+							<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="mudlevel.html#levelheight" class="tsd-kind-icon">level<wbr>Height</a></li>
+							<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="mudlevel.html#levelwidth" class="tsd-kind-icon">level<wbr>Width</a></li>
+							<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="mudlevel.html#roomcount" class="tsd-kind-icon">room<wbr>Count</a></li>
 							<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="mudlevel.html#rooms" class="tsd-kind-icon">rooms</a></li>
 						</ul>
 					</section>
@@ -2834,25 +2846,25 @@ img {
 				<a name="constructor" class="tsd-anchor"></a>
 				<h3>constructor</h3>
 				<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon">new MUDLevel<span class="tsd-signature-symbol">(</span>config<span class="tsd-signature-symbol">: </span><a href="../interfaces/mudgameconfig.html" class="tsd-signature-type">MUDGameConfig</a>, sizeX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, sizeY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="mudlevel.html" class="tsd-signature-type">MUDLevel</a></li>
+					<li class="tsd-signature tsd-kind-icon">new MUDLevel<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="mudlevel.html" class="tsd-signature-type">MUDLevel</a></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/12d88e3/src/level/level.ts#L21">level/level.ts:21</a></li>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/99b55c4/src/level/level.ts#L36">level/level.ts:36</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
-								<h5>config: <a href="../interfaces/mudgameconfig.html" class="tsd-signature-type">MUDGameConfig</a></h5>
+								<h5>name: <span class="tsd-signature-type">string</span></h5>
 							</li>
 							<li>
-								<h5>sizeX: <span class="tsd-signature-type">number</span></h5>
+								<h5>width: <span class="tsd-signature-type">number</span></h5>
 							</li>
 							<li>
-								<h5>sizeY: <span class="tsd-signature-type">number</span></h5>
+								<h5>height: <span class="tsd-signature-type">number</span></h5>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <a href="mudlevel.html" class="tsd-signature-type">MUDLevel</a></h4>
@@ -2868,7 +2880,17 @@ img {
 				<div class="tsd-signature tsd-kind-icon">_levelID<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/12d88e3/src/level/level.ts#L20">level/level.ts:20</a></li>
+						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/99b55c4/src/level/level.ts#L8">level/level.ts:8</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+				<a name="_levelname" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagPrivate">Private</span> _level<wbr>Name</h3>
+				<div class="tsd-signature tsd-kind-icon">_level<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/99b55c4/src/level/level.ts#L7">level/level.ts:7</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -2878,17 +2900,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">_rooms<span class="tsd-signature-symbol">:</span> <a href="mudroom.html" class="tsd-signature-type">MUDRoom</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/12d88e3/src/level/level.ts#L21">level/level.ts:21</a></li>
-					</ul>
-				</aside>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-				<a name="config" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagPrivate">Private</span> config</h3>
-				<div class="tsd-signature tsd-kind-icon">config<span class="tsd-signature-symbol">:</span> <a href="../interfaces/mudgameconfig.html" class="tsd-signature-type">MUDGameConfig</a></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/12d88e3/src/level/level.ts#L23">level/level.ts:23</a></li>
+						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/99b55c4/src/level/level.ts#L9">level/level.ts:9</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -2905,10 +2917,61 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/12d88e3/src/level/level.ts#L7">level/level.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/99b55c4/src/level/level.ts#L11">level/level.ts:11</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <a href="../interfaces/mudlevelinfo.html" class="tsd-signature-type">MUDLevelInfo</a></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+				<a name="levelheight" class="tsd-anchor"></a>
+				<h3>level<wbr>Height</h3>
+				<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> levelHeight<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/99b55c4/src/level/level.ts#L34">level/level.ts:34</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+				<a name="levelwidth" class="tsd-anchor"></a>
+				<h3>level<wbr>Width</h3>
+				<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> levelWidth<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/99b55c4/src/level/level.ts#L30">level/level.ts:30</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+				<a name="roomcount" class="tsd-anchor"></a>
+				<h3>room<wbr>Count</h3>
+				<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> roomCount<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/99b55c4/src/level/level.ts#L24">level/level.ts:24</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 					</li>
 				</ul>
 			</section>
@@ -2922,7 +2985,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/12d88e3/src/level/level.ts#L16">level/level.ts:16</a></li>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/99b55c4/src/level/level.ts#L20">level/level.ts:20</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <a href="mudroom.html" class="tsd-signature-type">MUDRoom</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></h4>
@@ -2942,7 +3005,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/12d88e3/src/level/level.ts#L34">level/level.ts:34</a></li>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/99b55c4/src/level/level.ts#L50">level/level.ts:50</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2968,7 +3031,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/12d88e3/src/level/level.ts#L42">level/level.ts:42</a></li>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/99b55c4/src/level/level.ts#L58">level/level.ts:58</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2995,6 +3058,9 @@ img {
 					</ul>
 					<ul class="tsd-legend">
 						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+					</ul>
+					<ul class="tsd-legend">
+						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
 					</ul>
 				</div>
 			</div>

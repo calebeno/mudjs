@@ -2723,6 +2723,9 @@ img {
 <nav class="tsd-navigation secondary">
 	<ul>
 		<li class=" tsd-kind-enum">
+			<a href="../enums/mudmessagepriority.html" class="tsd-kind-icon">MUDMessage<wbr>Priority</a>
+		</li>
+		<li class=" tsd-kind-enum">
 			<a href="../enums/mudroomstyle.html" class="tsd-kind-icon">MUDRoom<wbr>Style</a>
 		</li>
 		<li class=" tsd-kind-class">
@@ -2749,12 +2752,6 @@ img {
 				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a href="mudroom.html#_ycoordinate" class="tsd-kind-icon">_y<wbr>Coordinate</a>
 				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a href="mudroom.html#x" class="tsd-kind-icon">x</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a href="mudroom.html#y" class="tsd-kind-icon">y</a>
-				</li>
 				<li class=" tsd-kind-get-signature tsd-parent-kind-class">
 					<a href="mudroom.html#info" class="tsd-kind-icon">info</a>
 				</li>
@@ -2767,16 +2764,13 @@ img {
 			<a href="../interfaces/mudlevelinfo.html" class="tsd-kind-icon">MUDLevel<wbr>Info</a>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="../interfaces/mudroomconfig.html" class="tsd-kind-icon">MUDRoom<wbr>Config</a>
-		</li>
-		<li class=" tsd-kind-interface">
 			<a href="../interfaces/mudroominfo.html" class="tsd-kind-icon">MUDRoom<wbr>Info</a>
 		</li>
 		<li class=" tsd-kind-variable">
 			<a href="../globals.html#uuid" class="tsd-kind-icon">uuid</a>
 		</li>
 		<li class=" tsd-kind-function">
-			<a href="../globals.html#handleerror" class="tsd-kind-icon">handle<wbr>Error</a>
+			<a href="../globals.html#mudmessage" class="tsd-kind-icon">mud<wbr>Message</a>
 		</li>
 	</ul>
 </nav>
@@ -2806,8 +2800,6 @@ img {
 							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="mudroom.html#_roomid" class="tsd-kind-icon">_roomID</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="mudroom.html#_xcoordinate" class="tsd-kind-icon">_x<wbr>Coordinate</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="mudroom.html#_ycoordinate" class="tsd-kind-icon">_y<wbr>Coordinate</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="mudroom.html#x" class="tsd-kind-icon">x</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="mudroom.html#y" class="tsd-kind-icon">y</a></li>
 						</ul>
 					</section>
 					<section class="tsd-index-section ">
@@ -2831,7 +2823,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/12d88e3/src/room/room.ts#L15">room/room.ts:15</a></li>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/99b55c4/src/room/room.ts#L16">room/room.ts:16</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2856,7 +2848,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">_roomID<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/12d88e3/src/room/room.ts#L13">room/room.ts:13</a></li>
+						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/99b55c4/src/room/room.ts#L5">room/room.ts:5</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -2866,7 +2858,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">_x<wbr>Coordinate<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/12d88e3/src/room/room.ts#L14">room/room.ts:14</a></li>
+						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/99b55c4/src/room/room.ts#L6">room/room.ts:6</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -2876,27 +2868,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">_y<wbr>Coordinate<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/12d88e3/src/room/room.ts#L15">room/room.ts:15</a></li>
-					</ul>
-				</aside>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-				<a name="x" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagPrivate">Private</span> x</h3>
-				<div class="tsd-signature tsd-kind-icon">x<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/12d88e3/src/room/room.ts#L17">room/room.ts:17</a></li>
-					</ul>
-				</aside>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-				<a name="y" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagPrivate">Private</span> y</h3>
-				<div class="tsd-signature tsd-kind-icon">y<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/12d88e3/src/room/room.ts#L17">room/room.ts:17</a></li>
+						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/99b55c4/src/room/room.ts#L7">room/room.ts:7</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -2907,27 +2879,16 @@ img {
 				<a name="info" class="tsd-anchor"></a>
 				<h3>info</h3>
 				<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> info<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>description<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>title<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></li>
+					<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> info<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/mudroominfo.html" class="tsd-signature-type">MUDRoomInfo</a></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/12d88e3/src/room/room.ts#L5">room/room.ts:5</a></li>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/99b55c4/src/room/room.ts#L9">room/room.ts:9</a></li>
 							</ul>
 						</aside>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>description<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>title<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter">
-								<h5>description<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5>title<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-							</li>
-						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="../interfaces/mudroominfo.html" class="tsd-signature-type">MUDRoomInfo</a></h4>
 					</li>
 				</ul>
 			</section>
@@ -2945,6 +2906,9 @@ img {
 					</ul>
 					<ul class="tsd-legend">
 						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+					</ul>
+					<ul class="tsd-legend">
+						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
 					</ul>
 				</div>
 			</div>
