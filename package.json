@@ -1,6 +1,6 @@
 {
     "name": "mudjs",
-    "version": "0.2.3",
+    "version": "0.2.2",
     "description": "A library for making MUD type games.",
     "keywords": [],
     "main": "lib/mudjs.js",
@@ -37,10 +37,10 @@
         "prepush": "npm run test:prod && npm run build",
         "commitmsg": "commitlint -E HUSKY_GIT_PARAMS",
         "prepare": "npm run build",
-        "prepublishOnly" : "npm test:prod && npm run lint",
-        "preversion" : "npm run lint",
-        "version" : "git add -A src",
-        "postversion" : "git push && git push --tags"
+        "prepublishOnly": "npm test:prod && npm run lint",
+        "preversion": "npm run lint",
+        "version": "git add -A src",
+        "postversion": "git push && git push --tags"
     },
     "lint-staged": {
         "{src,test}/**/*.ts": [
