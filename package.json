@@ -3,10 +3,12 @@
     "version": "0.2.3",
     "description": "A library for making MUD type games.",
     "keywords": [],
+    "type": "module",
     "main": "lib/mudjs.js",
     "types": "lib/mudjs.d.ts",
     "files": [
-        "lib/**/*"
+        "lib",
+        "src"
     ],
     "author": "Caleb Eno",
     "repository": {
@@ -29,13 +31,11 @@
         "test:prod": "npm run lint && npm run test -- --no-cache",
         "deploy-docs": "gh-pages -d docs",
         "report-coverage": "cat ./coverage/lcov.info | coveralls",
-        "commit": "git-cz",
         "semantic-release": "semantic-release",
         "semantic-release-prepare": "ts-node tools/semantic-release-prepare",
         "precommit": "lint-staged",
-        "travis-deploy-once": "travis-deploy-once",
+        "commit": "git-cz",
         "prepush": "npm run test:prod && npm run build",
-        "commitmsg": "commitlint -E HUSKY_GIT_PARAMS",
         "prepare": "npm run build",
         "prepublishOnly": "npm run test:prod && npm run lint",
         "preversion": "npm run lint",
@@ -53,7 +53,7 @@
         }
     },
     "prettier": {
-        "semi": false,
+        "semi": true,
         "singleQuote": true
     },
     "commitlint": {
@@ -69,7 +69,6 @@
         "@rollup/plugin-node-resolve": "^13.0.0",
         "@rollup/plugin-typescript": "^8.2.1",
         "@types/jest": "^26.0.24",
-        "@types/lodash.camelcase": "^4.3.6",
         "@types/uuid": "^8.3.1",
         "@typescript-eslint/eslint-plugin": "^4.28.2",
         "@typescript-eslint/parser": "^4.28.2",
@@ -84,7 +83,6 @@
         "jest": "^27.0.6",
         "jest-config": "^27.0.6",
         "lint-staged": "^10.5.4",
-        "lodash.camelcase": "^4.3.0",
         "prettier": "^1.19.1",
         "prompt": "^1.1.0",
         "replace-in-file": "^5.0.2",
@@ -99,6 +97,7 @@
         "typescript": "^4.3.5"
     },
     "dependencies": {
-        "uuid": "^8.3.2"
+        "lodash.clamp": "^4.0.3",
+        "uuid": "8.3.2"
     }
 }

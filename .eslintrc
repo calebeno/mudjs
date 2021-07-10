@@ -12,5 +12,19 @@
         "eslint:recommended",
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended"
+    ],
+    "rules": {
+        "semi": "error"
+    },
+    "overrides": [
+        {
+            "files": [
+                "*.test.*"
+            ],
+            "rules": {
+                "@typescript-eslint/no-empty-function": "off",
+                "@typescript-eslint/no-explicit-any": "off"
+            }
+        }
     ]
 }

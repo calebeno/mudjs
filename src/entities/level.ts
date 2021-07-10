@@ -1,12 +1,12 @@
-import { mudMessage, MUDMessagePriority } from "../utility/mud-messenger";
-import { MUDRoom } from '../room/room'
-
-const uuid = require('uuid') // eslint-disable-line @typescript-eslint/no-var-requires
+import { mudMessage, MUDMessagePriority } from '../utility/mud-messenger';
+import { MUDRoom } from './room';
+import { v4 } from 'uuid';
+import { MUDLevelInfo } from '../mudjs.interfaces';
 
 export class MUDLevel {
-    private _levelName: string;
-    private _levelID: string;
-    private _rooms: MUDRoom[][];
+    private _levelName: string
+    private _levelID: string
+    private _rooms: MUDRoom[][]
 
     get info(): MUDLevelInfo {
         const sizeY = this._rooms.length;
@@ -24,7 +24,7 @@ export class MUDLevel {
     get roomCount(): number {
         return this._rooms.reduce((total, current) => {
             return total + current.length;
-        }, 0)
+        }, 0);
     }
 
     get levelWidth(): number {
@@ -37,7 +37,7 @@ export class MUDLevel {
 
     constructor(name: string, width: number, height: number) {
         this._levelName = name;
-        this._levelID = uuid.v4();
+        this._levelID = v4();
         this._rooms = Array(width)
             .fill(0)
             .map((_val, x) => {
@@ -56,21 +56,16 @@ export class MUDLevel {
     }
 
     getRoomByID(id: string): MUDRoom | null {
-        let found = null
+        let found = null;
         this._rooms.some((row: MUDRoom[]) => {
-            found = row.find((room: MUDRoom) => room.info.roomID === id)
-            return Boolean(found)
-        })
+            found = row.find((room: MUDRoom) => room.info.roomID === id);
+            return Boolean(found);
+        });
 
         if (found) {
-            return found
+            return found;
         }
-        mudMessage(MUDMessagePriority.warning, `No Room found on level ${this._levelID} with id: ${id}`)
-        return null
+        mudMessage(MUDMessagePriority.warning, `No Room found on level ${this._levelID} with id: ${id}`);
+        return null;
     }
-}
-
-export interface MUDLevelInfo {
-    levelID: string
-    size: { x: number; y: number }
 }

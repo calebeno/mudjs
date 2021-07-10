@@ -1,9 +1,9 @@
-import resolve from '@rollup/plugin-node-resolve'
-import commonjs from '@rollup/plugin-commonjs'
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
 // import sourceMaps from 'rollup-plugin-sourcemaps'
-import camelCase from 'lodash.camelcase'
-import typescript from '@rollup/plugin-typescript'
-import json from '@rollup/plugin-json'
+import camelCase from 'lodash.camelcase';
+import typescript from '@rollup/plugin-typescript';
+import json from '@rollup/plugin-json';
 // import builtins from 'rollup-plugin-node-builtins'
 
 import pkg from './package.json';
@@ -38,4 +38,4 @@ export default {
         // Resolve source maps to the original source
         // sourceMaps()
     ]
-}
+};

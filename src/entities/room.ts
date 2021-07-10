@@ -1,5 +1,5 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const uuid = require('uuid')
+import { v4 } from 'uuid';
+import { MUDRoomInfo } from '../mudjs.interfaces';
 
 export class MUDRoom {
     private _roomID: string
@@ -12,24 +12,12 @@ export class MUDRoom {
             title: `Room at ${this._xCoordinate}x${this._yCoordinate}`,
             coordinates: `${this._xCoordinate}x${this._yCoordinate}`,
             description: `Room Description at ${this._xCoordinate}x${this._yCoordinate}`
-        }
+        };
     }
 
     constructor(x: number, y: number) {
-        this._roomID = uuid.v4()
-        this._xCoordinate = x
-        this._yCoordinate = y
+        this._roomID = v4();
+        this._xCoordinate = x;
+        this._yCoordinate = y;
     }
-}
-
-export interface MUDRoomInfo {
-    roomID: string;
-    title: string;
-    coordinates: string;
-    description: string;
-}
-
-export enum MUDRoomStyle {
-    directional = 'directional',
-    single = 'single'
 }
