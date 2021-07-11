@@ -38,7 +38,7 @@
         "prepush": "npm run test:prod && npm run build",
         "prepare": "npm run build",
         "prepublishOnly": "npm run test:prod && npm run lint",
-        "preversion": "npm run lint",
+        "preversion": "npm run lint && npm run build",
         "version": "git add -A src",
         "postversion": "git push && git push --tags"
     },
