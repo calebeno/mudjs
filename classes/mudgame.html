@@ -2743,6 +2743,12 @@ img {
 				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a href="mudgame.html#_levels" class="tsd-kind-icon">_levels</a>
 				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a href="mudgame.html#_players" class="tsd-kind-icon">_players</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a href="mudgame.html#_statdefinitions" class="tsd-kind-icon">_stat<wbr>Definitions</a>
+				</li>
 				<li class=" tsd-kind-get-signature tsd-parent-kind-class">
 					<a href="mudgame.html#levelcount" class="tsd-kind-icon">level<wbr>Count</a>
 				</li>
@@ -2750,12 +2756,36 @@ img {
 					<a href="mudgame.html#createlevel" class="tsd-kind-icon">create<wbr>Level</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="mudgame.html#editstatdefinitionbyid" class="tsd-kind-icon">edit<wbr>Stat<wbr>Definition<wbr>ByID</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
 					<a href="mudgame.html#getlevel" class="tsd-kind-icon">get<wbr>Level</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="mudgame.html#getplayerbyid" class="tsd-kind-icon">get<wbr>Player<wbr>ByID</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="mudgame.html#getplayers" class="tsd-kind-icon">get<wbr>Players</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="mudgame.html#getstatdefinitionbyid" class="tsd-kind-icon">get<wbr>Stat<wbr>Definition<wbr>ByID</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="mudgame.html#getstatdefinitions" class="tsd-kind-icon">get<wbr>Stat<wbr>Definitions</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="mudgame.html#registerplayer" class="tsd-kind-icon">register<wbr>Player</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="mudgame.html#registerstatdefinition" class="tsd-kind-icon">register<wbr>Stat<wbr>Definition</a>
 				</li>
 			</ul>
 		</li>
 		<li class=" tsd-kind-class">
 			<a href="mudlevel.html" class="tsd-kind-icon">MUDLevel</a>
+		</li>
+		<li class=" tsd-kind-class">
+			<a href="mudplayer.html" class="tsd-kind-icon">MUDPlayer</a>
 		</li>
 		<li class=" tsd-kind-class">
 			<a href="mudroom.html" class="tsd-kind-icon">MUDRoom</a>
@@ -2764,7 +2794,10 @@ img {
 			<a href="mudstat.html" class="tsd-kind-icon">MUDStat</a>
 		</li>
 		<li class=" tsd-kind-class">
-			<a href="player.html" class="tsd-kind-icon">Player</a>
+			<a href="mudstatdefinition.html" class="tsd-kind-icon">MUDStat<wbr>Definition</a>
+		</li>
+		<li class=" tsd-kind-class">
+			<a href="mudstatmod.html" class="tsd-kind-icon">MUDStat<wbr>Mod</a>
 		</li>
 		<li class=" tsd-kind-interface">
 			<a href="../interfaces/mudgameconfig.html" class="tsd-kind-icon">MUDGame<wbr>Config</a>
@@ -2773,16 +2806,31 @@ img {
 			<a href="../interfaces/mudlevelinfo.html" class="tsd-kind-icon">MUDLevel<wbr>Info</a>
 		</li>
 		<li class=" tsd-kind-interface">
+			<a href="../interfaces/mudplayerserialized.html" class="tsd-kind-icon">MUDPlayer<wbr>Serialized</a>
+		</li>
+		<li class=" tsd-kind-interface">
 			<a href="../interfaces/mudroominfo.html" class="tsd-kind-icon">MUDRoom<wbr>Info</a>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="../interfaces/mudstatmod.html" class="tsd-kind-icon">MUDStat<wbr>Mod</a>
+			<a href="../interfaces/mudstatdefinitionserialized.html" class="tsd-kind-icon">MUDStat<wbr>Definition<wbr>Serialized</a>
+		</li>
+		<li class=" tsd-kind-interface">
+			<a href="../interfaces/mudstatmodserialized.html" class="tsd-kind-icon">MUDStat<wbr>Mod<wbr>Serialized</a>
+		</li>
+		<li class=" tsd-kind-interface">
+			<a href="../interfaces/mudstatserialized.html" class="tsd-kind-icon">MUDStat<wbr>Serialized</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-has-type-parameter">
+			<a href="../interfaces/serializable.html" class="tsd-kind-icon">Serializable</a>
 		</li>
 		<li class=" tsd-kind-variable">
 			<a href="../globals.html#mockedv4" class="tsd-kind-icon">mocked<wbr>V4</a>
 		</li>
 		<li class=" tsd-kind-function">
 			<a href="../globals.html#mudmessage" class="tsd-kind-icon">mud<wbr>Message</a>
+		</li>
+		<li class=" tsd-kind-function tsd-has-type-parameter">
+			<a href="../globals.html#staticimplements" class="tsd-kind-icon">static<wbr>Implements</a>
 		</li>
 	</ul>
 </nav>
@@ -2804,6 +2852,8 @@ img {
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="mudgame.html#_levels" class="tsd-kind-icon">_levels</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="mudgame.html#_players" class="tsd-kind-icon">_players</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="mudgame.html#_statdefinitions" class="tsd-kind-icon">_stat<wbr>Definitions</a></li>
 						</ul>
 					</section>
 					<section class="tsd-index-section ">
@@ -2816,7 +2866,14 @@ img {
 						<h3>Methods</h3>
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="mudgame.html#createlevel" class="tsd-kind-icon">create<wbr>Level</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="mudgame.html#editstatdefinitionbyid" class="tsd-kind-icon">edit<wbr>Stat<wbr>Definition<wbr>ByID</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="mudgame.html#getlevel" class="tsd-kind-icon">get<wbr>Level</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="mudgame.html#getplayerbyid" class="tsd-kind-icon">get<wbr>Player<wbr>ByID</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="mudgame.html#getplayers" class="tsd-kind-icon">get<wbr>Players</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="mudgame.html#getstatdefinitionbyid" class="tsd-kind-icon">get<wbr>Stat<wbr>Definition<wbr>ByID</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="mudgame.html#getstatdefinitions" class="tsd-kind-icon">get<wbr>Stat<wbr>Definitions</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="mudgame.html#registerplayer" class="tsd-kind-icon">register<wbr>Player</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="mudgame.html#registerstatdefinition" class="tsd-kind-icon">register<wbr>Stat<wbr>Definition</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2830,7 +2887,27 @@ img {
 				<div class="tsd-signature tsd-kind-icon">_levels<span class="tsd-signature-symbol">:</span> <a href="mudlevel.html" class="tsd-signature-type">MUDLevel</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/2322e61/src/entities/game.ts#L8">src/entities/game.ts:8</a></li>
+						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/game.ts#L44">src/entities/game.ts:44</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+				<a name="_players" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagPrivate">Private</span> _players</h3>
+				<div class="tsd-signature tsd-kind-icon">_players<span class="tsd-signature-symbol">:</span> <a href="mudplayer.html" class="tsd-signature-type">MUDPlayer</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/game.ts#L80">src/entities/game.ts:80</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+				<a name="_statdefinitions" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagPrivate">Private</span> _stat<wbr>Definitions</h3>
+				<div class="tsd-signature tsd-kind-icon">_stat<wbr>Definitions<span class="tsd-signature-symbol">:</span> <a href="mudstatdefinition.html" class="tsd-signature-type">MUDStatDefinition</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/game.ts#L12">src/entities/game.ts:12</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -2847,7 +2924,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/2322e61/src/entities/game.ts#L10">src/entities/game.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/game.ts#L46">src/entities/game.ts:46</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -2867,7 +2944,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/2322e61/src/entities/game.ts#L14">src/entities/game.ts:14</a></li>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/game.ts#L50">src/entities/game.ts:50</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2887,6 +2964,43 @@ img {
 				</ul>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="editstatdefinitionbyid" class="tsd-anchor"></a>
+				<h3>edit<wbr>Stat<wbr>Definition<wbr>ByID</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">edit<wbr>Stat<wbr>Definition<wbr>ByID<span class="tsd-signature-symbol">(</span>statDefinitionID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, edits<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>displayName<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>maxValue<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>minValue<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="mudstatdefinition.html" class="tsd-signature-type">MUDStatDefinition</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/game.ts#L32">src/entities/game.ts:32</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>statDefinitionID: <span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li>
+								<h5>edits: <span class="tsd-signature-symbol">{ </span>displayName<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>maxValue<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>minValue<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5><span class="tsd-flag ts-flagOptional">Optional</span> display<wbr>Name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5><span class="tsd-flag ts-flagOptional">Optional</span> max<wbr>Value<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5><span class="tsd-flag ts-flagOptional">Optional</span> min<wbr>Value<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span></h5>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="mudstatdefinition.html" class="tsd-signature-type">MUDStatDefinition</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 				<a name="getlevel" class="tsd-anchor"></a>
 				<h3>get<wbr>Level</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -2896,7 +3010,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/2322e61/src/entities/game.ts#L20">src/entities/game.ts:20</a></li>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/game.ts#L56">src/entities/game.ts:56</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2906,6 +3020,132 @@ img {
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <a href="mudlevel.html" class="tsd-signature-type">MUDLevel</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="getplayerbyid" class="tsd-anchor"></a>
+				<h3>get<wbr>Player<wbr>ByID</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Player<wbr>ByID<span class="tsd-signature-symbol">(</span>playerID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="mudplayer.html" class="tsd-signature-type">MUDPlayer</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/game.ts#L96">src/entities/game.ts:96</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>playerID: <span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="mudplayer.html" class="tsd-signature-type">MUDPlayer</a></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="getplayers" class="tsd-anchor"></a>
+				<h3>get<wbr>Players</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Players<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="mudplayer.html" class="tsd-signature-type">MUDPlayer</a><span class="tsd-signature-symbol">[]</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/game.ts#L91">src/entities/game.ts:91</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-returns-title">Returns <a href="mudplayer.html" class="tsd-signature-type">MUDPlayer</a><span class="tsd-signature-symbol">[]</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="getstatdefinitionbyid" class="tsd-anchor"></a>
+				<h3>get<wbr>Stat<wbr>Definition<wbr>ByID</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Stat<wbr>Definition<wbr>ByID<span class="tsd-signature-symbol">(</span>statDefinitionID<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="mudstatdefinition.html" class="tsd-signature-type">MUDStatDefinition</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/game.ts#L28">src/entities/game.ts:28</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>statDefinitionID: <span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="mudstatdefinition.html" class="tsd-signature-type">MUDStatDefinition</a></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="getstatdefinitions" class="tsd-anchor"></a>
+				<h3>get<wbr>Stat<wbr>Definitions</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Stat<wbr>Definitions<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="mudstatdefinition.html" class="tsd-signature-type">MUDStatDefinition</a><span class="tsd-signature-symbol">[]</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/game.ts#L23">src/entities/game.ts:23</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-returns-title">Returns <a href="mudstatdefinition.html" class="tsd-signature-type">MUDStatDefinition</a><span class="tsd-signature-symbol">[]</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="registerplayer" class="tsd-anchor"></a>
+				<h3>register<wbr>Player</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">register<wbr>Player<span class="tsd-signature-symbol">(</span>player<span class="tsd-signature-symbol">: </span><a href="mudplayer.html" class="tsd-signature-type">MUDPlayer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/game.ts#L82">src/entities/game.ts:82</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>player: <a href="mudplayer.html" class="tsd-signature-type">MUDPlayer</a></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="registerstatdefinition" class="tsd-anchor"></a>
+				<h3>register<wbr>Stat<wbr>Definition</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">register<wbr>Stat<wbr>Definition<span class="tsd-signature-symbol">(</span>statDefinition<span class="tsd-signature-symbol">: </span><a href="mudstatdefinition.html" class="tsd-signature-type">MUDStatDefinition</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/game.ts#L14">src/entities/game.ts:14</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>statDefinition: <a href="mudstatdefinition.html" class="tsd-signature-type">MUDStatDefinition</a></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 					</li>
 				</ul>
 			</section>
@@ -2920,14 +3160,16 @@ img {
 						<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 					</ul>
 					<ul class="tsd-legend">
+						<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+						<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+					</ul>
+					<ul class="tsd-legend">
 						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
 						<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
 					</ul>
 					<ul class="tsd-legend">
-						<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-					</ul>
-					<ul class="tsd-legend">
 						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+						<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
 					</ul>
 				</div>
 			</div>

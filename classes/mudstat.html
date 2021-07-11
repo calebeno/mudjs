@@ -2744,6 +2744,9 @@ img {
 			<a href="mudlevel.html" class="tsd-kind-icon">MUDLevel</a>
 		</li>
 		<li class=" tsd-kind-class">
+			<a href="mudplayer.html" class="tsd-kind-icon">MUDPlayer</a>
+		</li>
+		<li class=" tsd-kind-class">
 			<a href="mudroom.html" class="tsd-kind-icon">MUDRoom</a>
 		</li>
 		<li class="current tsd-kind-class">
@@ -2756,30 +2759,45 @@ img {
 					<a href="mudstat.html#_basevalue" class="tsd-kind-icon">_base<wbr>Value</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a href="mudstat.html#_maxvalue" class="tsd-kind-icon">_max<wbr>Value</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a href="mudstat.html#_minvalue" class="tsd-kind-icon">_min<wbr>Value</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a href="mudstat.html#_mods" class="tsd-kind-icon">_mods</a>
 				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-class">
-					<a href="mudstat.html#name" class="tsd-kind-icon">name</a>
+				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a href="mudstat.html#_statdefinition" class="tsd-kind-icon">_stat<wbr>Definition</a>
 				</li>
 				<li class=" tsd-kind-get-signature tsd-parent-kind-class">
-					<a href="mudstat.html#value" class="tsd-kind-icon">value</a>
+					<a href="mudstat.html#basevalue" class="tsd-kind-icon">base<wbr>Value</a>
+				</li>
+				<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+					<a href="mudstat.html#displayname" class="tsd-kind-icon">display<wbr>Name</a>
+				</li>
+				<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+					<a href="mudstat.html#statid" class="tsd-kind-icon">statID</a>
+				</li>
+				<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+					<a href="mudstat.html#totalvalue" class="tsd-kind-icon">total<wbr>Value</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class">
 					<a href="mudstat.html#addmodifier" class="tsd-kind-icon">Add<wbr>Modifier</a>
 				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="mudstat.html#addtobasevalue" class="tsd-kind-icon">Add<wbr>ToBase<wbr>Value</a>
+				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
 					<a href="mudstat.html#calcmods" class="tsd-kind-icon">calc<wbr>Mods</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a href="mudstat.html#deserialize" class="tsd-kind-icon">Deserialize</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a href="mudstat.html#serialize" class="tsd-kind-icon">Serialize</a>
 				</li>
 			</ul>
 		</li>
 		<li class=" tsd-kind-class">
-			<a href="player.html" class="tsd-kind-icon">Player</a>
+			<a href="mudstatdefinition.html" class="tsd-kind-icon">MUDStat<wbr>Definition</a>
+		</li>
+		<li class=" tsd-kind-class">
+			<a href="mudstatmod.html" class="tsd-kind-icon">MUDStat<wbr>Mod</a>
 		</li>
 		<li class=" tsd-kind-interface">
 			<a href="../interfaces/mudgameconfig.html" class="tsd-kind-icon">MUDGame<wbr>Config</a>
@@ -2788,16 +2806,31 @@ img {
 			<a href="../interfaces/mudlevelinfo.html" class="tsd-kind-icon">MUDLevel<wbr>Info</a>
 		</li>
 		<li class=" tsd-kind-interface">
+			<a href="../interfaces/mudplayerserialized.html" class="tsd-kind-icon">MUDPlayer<wbr>Serialized</a>
+		</li>
+		<li class=" tsd-kind-interface">
 			<a href="../interfaces/mudroominfo.html" class="tsd-kind-icon">MUDRoom<wbr>Info</a>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="../interfaces/mudstatmod.html" class="tsd-kind-icon">MUDStat<wbr>Mod</a>
+			<a href="../interfaces/mudstatdefinitionserialized.html" class="tsd-kind-icon">MUDStat<wbr>Definition<wbr>Serialized</a>
+		</li>
+		<li class=" tsd-kind-interface">
+			<a href="../interfaces/mudstatmodserialized.html" class="tsd-kind-icon">MUDStat<wbr>Mod<wbr>Serialized</a>
+		</li>
+		<li class=" tsd-kind-interface">
+			<a href="../interfaces/mudstatserialized.html" class="tsd-kind-icon">MUDStat<wbr>Serialized</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-has-type-parameter">
+			<a href="../interfaces/serializable.html" class="tsd-kind-icon">Serializable</a>
 		</li>
 		<li class=" tsd-kind-variable">
 			<a href="../globals.html#mockedv4" class="tsd-kind-icon">mocked<wbr>V4</a>
 		</li>
 		<li class=" tsd-kind-function">
 			<a href="../globals.html#mudmessage" class="tsd-kind-icon">mud<wbr>Message</a>
+		</li>
+		<li class=" tsd-kind-function tsd-has-type-parameter">
+			<a href="../globals.html#staticimplements" class="tsd-kind-icon">static<wbr>Implements</a>
 		</li>
 	</ul>
 </nav>
@@ -2821,27 +2854,31 @@ img {
 							<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="mudstat.html#constructor" class="tsd-kind-icon">constructor</a></li>
 						</ul>
 					</section>
-					<section class="tsd-index-section ">
+					<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="mudstat.html#_basevalue" class="tsd-kind-icon">_base<wbr>Value</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="mudstat.html#_maxvalue" class="tsd-kind-icon">_max<wbr>Value</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="mudstat.html#_minvalue" class="tsd-kind-icon">_min<wbr>Value</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="mudstat.html#_mods" class="tsd-kind-icon">_mods</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-class"><a href="mudstat.html#name" class="tsd-kind-icon">name</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="mudstat.html#_statdefinition" class="tsd-kind-icon">_stat<wbr>Definition</a></li>
 						</ul>
 					</section>
 					<section class="tsd-index-section ">
 						<h3>Accessors</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="mudstat.html#value" class="tsd-kind-icon">value</a></li>
+							<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="mudstat.html#basevalue" class="tsd-kind-icon">base<wbr>Value</a></li>
+							<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="mudstat.html#displayname" class="tsd-kind-icon">display<wbr>Name</a></li>
+							<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="mudstat.html#statid" class="tsd-kind-icon">statID</a></li>
+							<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="mudstat.html#totalvalue" class="tsd-kind-icon">total<wbr>Value</a></li>
 						</ul>
 					</section>
 					<section class="tsd-index-section ">
 						<h3>Methods</h3>
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="mudstat.html#addmodifier" class="tsd-kind-icon">Add<wbr>Modifier</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="mudstat.html#addtobasevalue" class="tsd-kind-icon">Add<wbr>ToBase<wbr>Value</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="mudstat.html#calcmods" class="tsd-kind-icon">calc<wbr>Mods</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="mudstat.html#deserialize" class="tsd-kind-icon">Deserialize</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="mudstat.html#serialize" class="tsd-kind-icon">Serialize</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2853,28 +2890,22 @@ img {
 				<a name="constructor" class="tsd-anchor"></a>
 				<h3>constructor</h3>
 				<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon">new MUDStat<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, baseValue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, minValue<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, maxValue<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="mudstat.html" class="tsd-signature-type">MUDStat</a></li>
+					<li class="tsd-signature tsd-kind-icon">new MUDStat<span class="tsd-signature-symbol">(</span>statDefinition<span class="tsd-signature-symbol">: </span><a href="mudstatdefinition.html" class="tsd-signature-type">MUDStatDefinition</a>, baseValue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="mudstat.html" class="tsd-signature-type">MUDStat</a></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/2322e61/src/entities/stat.ts#L17">src/entities/stat.ts:17</a></li>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/stat.ts#L30">src/entities/stat.ts:30</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
-								<h5>name: <span class="tsd-signature-type">string</span></h5>
+								<h5>statDefinition: <a href="mudstatdefinition.html" class="tsd-signature-type">MUDStatDefinition</a></h5>
 							</li>
 							<li>
 								<h5>baseValue: <span class="tsd-signature-type">number</span></h5>
-							</li>
-							<li>
-								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> minValue: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
-							</li>
-							<li>
-								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> maxValue: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 100000</span></h5>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <a href="mudstat.html" class="tsd-signature-type">MUDStat</a></h4>
@@ -2882,7 +2913,7 @@ img {
 				</ul>
 			</section>
 		</section>
-		<section class="tsd-panel-group tsd-member-group ">
+		<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
 			<h2>Properties</h2>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 				<a name="_basevalue" class="tsd-anchor"></a>
@@ -2890,47 +2921,27 @@ img {
 				<div class="tsd-signature tsd-kind-icon">_base<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/2322e61/src/entities/stat.ts#L6">src/entities/stat.ts:6</a></li>
-					</ul>
-				</aside>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-				<a name="_maxvalue" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagPrivate">Private</span> _max<wbr>Value</h3>
-				<div class="tsd-signature tsd-kind-icon">_max<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/2322e61/src/entities/stat.ts#L10">src/entities/stat.ts:10</a></li>
-					</ul>
-				</aside>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-				<a name="_minvalue" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagPrivate">Private</span> _min<wbr>Value</h3>
-				<div class="tsd-signature tsd-kind-icon">_min<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/2322e61/src/entities/stat.ts#L9">src/entities/stat.ts:9</a></li>
+						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/stat.ts#L10">src/entities/stat.ts:10</a></li>
 					</ul>
 				</aside>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 				<a name="_mods" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagPrivate">Private</span> _mods</h3>
-				<div class="tsd-signature tsd-kind-icon">_mods<span class="tsd-signature-symbol">:</span> <a href="../interfaces/mudstatmod.html" class="tsd-signature-type">MUDStatMod</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div>
+				<div class="tsd-signature tsd-kind-icon">_mods<span class="tsd-signature-symbol">:</span> <a href="mudstatmod.html" class="tsd-signature-type">MUDStatMod</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/2322e61/src/entities/stat.ts#L7">src/entities/stat.ts:7</a></li>
+						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/stat.ts#L11">src/entities/stat.ts:11</a></li>
 					</ul>
 				</aside>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-				<a name="name" class="tsd-anchor"></a>
-				<h3>name</h3>
-				<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+				<a name="_statdefinition" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagPrivate">Private</span> _stat<wbr>Definition</h3>
+				<div class="tsd-signature tsd-kind-icon">_stat<wbr>Definition<span class="tsd-signature-symbol">:</span> <a href="mudstatdefinition.html" class="tsd-signature-type">MUDStatDefinition</a></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/2322e61/src/entities/stat.ts#L4">src/entities/stat.ts:4</a></li>
+						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/stat.ts#L9">src/entities/stat.ts:9</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -2938,16 +2949,67 @@ img {
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Accessors</h2>
 			<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
-				<a name="value" class="tsd-anchor"></a>
-				<h3>value</h3>
+				<a name="basevalue" class="tsd-anchor"></a>
+				<h3>base<wbr>Value</h3>
 				<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> value<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> baseValue<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/2322e61/src/entities/stat.ts#L12">src/entities/stat.ts:12</a></li>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/stat.ts#L17">src/entities/stat.ts:17</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+				<a name="displayname" class="tsd-anchor"></a>
+				<h3>display<wbr>Name</h3>
+				<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> displayName<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/stat.ts#L13">src/entities/stat.ts:13</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+				<a name="statid" class="tsd-anchor"></a>
+				<h3>statID</h3>
+				<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> statID<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/stat.ts#L21">src/entities/stat.ts:21</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+				<a name="totalvalue" class="tsd-anchor"></a>
+				<h3>total<wbr>Value</h3>
+				<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> totalValue<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/stat.ts#L25">src/entities/stat.ts:25</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -2967,7 +3029,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/2322e61/src/entities/stat.ts#L26">src/entities/stat.ts:26</a></li>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/stat.ts#L41">src/entities/stat.ts:41</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2986,6 +3048,29 @@ img {
 					</li>
 				</ul>
 			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="addtobasevalue" class="tsd-anchor"></a>
+				<h3>Add<wbr>ToBase<wbr>Value</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">Add<wbr>ToBase<wbr>Value<span class="tsd-signature-symbol">(</span>valueToAdd<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/stat.ts#L37">src/entities/stat.ts:37</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>valueToAdd: <span class="tsd-signature-type">number</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
 				<a name="calcmods" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagPrivate">Private</span> calc<wbr>Mods</h3>
@@ -2996,7 +3081,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/2322e61/src/entities/stat.ts#L34">src/entities/stat.ts:34</a></li>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/stat.ts#L45">src/entities/stat.ts:45</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3012,6 +3097,52 @@ img {
 					</li>
 				</ul>
 			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+				<a name="deserialize" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagStatic">Static</span> Deserialize</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<li class="tsd-signature tsd-kind-icon">Deserialize<span class="tsd-signature-symbol">(</span>serializedStat<span class="tsd-signature-symbol">: </span><a href="../interfaces/mudstatserialized.html" class="tsd-signature-type">MUDStatSerialized</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="mudstat.html" class="tsd-signature-type">MUDStat</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/stat.ts#L70">src/entities/stat.ts:70</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>serializedStat: <a href="../interfaces/mudstatserialized.html" class="tsd-signature-type">MUDStatSerialized</a></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="mudstat.html" class="tsd-signature-type">MUDStat</a></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+				<a name="serialize" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagStatic">Static</span> Serialize</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<li class="tsd-signature tsd-kind-icon">Serialize<span class="tsd-signature-symbol">(</span>stat<span class="tsd-signature-symbol">: </span><a href="mudstat.html" class="tsd-signature-type">MUDStat</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/mudstatserialized.html" class="tsd-signature-type">MUDStatSerialized</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/stat.ts#L62">src/entities/stat.ts:62</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>stat: <a href="mudstat.html" class="tsd-signature-type">MUDStat</a></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="../interfaces/mudstatserialized.html" class="tsd-signature-type">MUDStatSerialized</a></h4>
+					</li>
+				</ul>
+			</section>
 		</section>
 		<footer class="with-border-bottom">
 			<div class="container">
@@ -3023,14 +3154,16 @@ img {
 						<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 					</ul>
 					<ul class="tsd-legend">
+						<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+						<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+					</ul>
+					<ul class="tsd-legend">
 						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
 						<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
 					</ul>
 					<ul class="tsd-legend">
-						<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-					</ul>
-					<ul class="tsd-legend">
 						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+						<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
 					</ul>
 				</div>
 			</div>

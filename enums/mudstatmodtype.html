@@ -2758,13 +2758,19 @@ img {
 			<a href="../classes/mudlevel.html" class="tsd-kind-icon">MUDLevel</a>
 		</li>
 		<li class=" tsd-kind-class">
+			<a href="../classes/mudplayer.html" class="tsd-kind-icon">MUDPlayer</a>
+		</li>
+		<li class=" tsd-kind-class">
 			<a href="../classes/mudroom.html" class="tsd-kind-icon">MUDRoom</a>
 		</li>
 		<li class=" tsd-kind-class">
 			<a href="../classes/mudstat.html" class="tsd-kind-icon">MUDStat</a>
 		</li>
 		<li class=" tsd-kind-class">
-			<a href="../classes/player.html" class="tsd-kind-icon">Player</a>
+			<a href="../classes/mudstatdefinition.html" class="tsd-kind-icon">MUDStat<wbr>Definition</a>
+		</li>
+		<li class=" tsd-kind-class">
+			<a href="../classes/mudstatmod.html" class="tsd-kind-icon">MUDStat<wbr>Mod</a>
 		</li>
 		<li class=" tsd-kind-interface">
 			<a href="../interfaces/mudgameconfig.html" class="tsd-kind-icon">MUDGame<wbr>Config</a>
@@ -2773,16 +2779,31 @@ img {
 			<a href="../interfaces/mudlevelinfo.html" class="tsd-kind-icon">MUDLevel<wbr>Info</a>
 		</li>
 		<li class=" tsd-kind-interface">
+			<a href="../interfaces/mudplayerserialized.html" class="tsd-kind-icon">MUDPlayer<wbr>Serialized</a>
+		</li>
+		<li class=" tsd-kind-interface">
 			<a href="../interfaces/mudroominfo.html" class="tsd-kind-icon">MUDRoom<wbr>Info</a>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="../interfaces/mudstatmod.html" class="tsd-kind-icon">MUDStat<wbr>Mod</a>
+			<a href="../interfaces/mudstatdefinitionserialized.html" class="tsd-kind-icon">MUDStat<wbr>Definition<wbr>Serialized</a>
+		</li>
+		<li class=" tsd-kind-interface">
+			<a href="../interfaces/mudstatmodserialized.html" class="tsd-kind-icon">MUDStat<wbr>Mod<wbr>Serialized</a>
+		</li>
+		<li class=" tsd-kind-interface">
+			<a href="../interfaces/mudstatserialized.html" class="tsd-kind-icon">MUDStat<wbr>Serialized</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-has-type-parameter">
+			<a href="../interfaces/serializable.html" class="tsd-kind-icon">Serializable</a>
 		</li>
 		<li class=" tsd-kind-variable">
 			<a href="../globals.html#mockedv4" class="tsd-kind-icon">mocked<wbr>V4</a>
 		</li>
 		<li class=" tsd-kind-function">
 			<a href="../globals.html#mudmessage" class="tsd-kind-icon">mud<wbr>Message</a>
+		</li>
+		<li class=" tsd-kind-function tsd-has-type-parameter">
+			<a href="../globals.html#staticimplements" class="tsd-kind-icon">static<wbr>Implements</a>
 		</li>
 	</ul>
 </nav>
@@ -2812,7 +2833,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">add<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;add&quot;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/2322e61/src/entities/stat.ts#L59">src/entities/stat.ts:59</a></li>
+						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/stat-mod.ts#L36">src/entities/stat-mod.ts:36</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -2822,7 +2843,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">divide<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;divide&quot;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/2322e61/src/entities/stat.ts#L62">src/entities/stat.ts:62</a></li>
+						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/stat-mod.ts#L39">src/entities/stat-mod.ts:39</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -2832,7 +2853,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">multiply<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;multiply&quot;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/2322e61/src/entities/stat.ts#L61">src/entities/stat.ts:61</a></li>
+						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/stat-mod.ts#L38">src/entities/stat-mod.ts:38</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -2842,7 +2863,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">subtract<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;sub&quot;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/2322e61/src/entities/stat.ts#L60">src/entities/stat.ts:60</a></li>
+						<li>Defined in <a href="https://github.com/calebeno/mudjs/blob/0339ae2/src/entities/stat-mod.ts#L37">src/entities/stat-mod.ts:37</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -2857,14 +2878,16 @@ img {
 						<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 					</ul>
 					<ul class="tsd-legend">
+						<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+						<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+					</ul>
+					<ul class="tsd-legend">
 						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
 						<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
 					</ul>
 					<ul class="tsd-legend">
-						<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-					</ul>
-					<ul class="tsd-legend">
 						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+						<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
 					</ul>
 				</div>
 			</div>
