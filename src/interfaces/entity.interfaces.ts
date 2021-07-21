@@ -1,4 +1,4 @@
-import { MUDRoomStyle } from './mudjs.enums';
+import { MUDRoomStyle } from '../mudjs.enums';
 
 export interface MUDLevelInfo {
     levelID: string;

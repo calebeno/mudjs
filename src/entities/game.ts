@@ -1,44 +1,26 @@
 import { MUDLevel } from './level';
 import { mudMessage, MUDMessagePriority } from '../utility/mud-messenger';
-import { MUDStatDefinition } from './stat-definition';
 import { cloneDeep } from 'lodash';
 import { MUDPlayer } from './player';
+import { MUDStatDefinitionAccessors } from "../accessors/stat-definition.acc";
+import { staticImplements } from "../utility/class-decorators";
+import { Serializable } from "../interfaces/entity.interfaces";
+import { MUDStatDefinition } from "./stat-definition";
+import { MUDPlayerAccessors } from "../accessors/player.acc";
+import { MUDGameSerialized } from "../interfaces/serialized.interfaces";
 
+@staticImplements<Serializable<MUDGame, MUDGameSerialized>>()
 export class MUDGame {
     // TODO:  Move these into separate "managers"
     // TODO:  Observables?
 
-    // Stat Accessors
-    private _statDefinitions: MUDStatDefinition[] = [];
+    public StatDefinitions: MUDStatDefinitionAccessors = new MUDStatDefinitionAccessors();
+    public Players: MUDPlayerAccessors = new MUDPlayerAccessors();
 
-    public registerStatDefinition(statDefinition: MUDStatDefinition): void {
-        const alreadyRegistered = this._statDefinitions.some(statDef => statDef.statID === statDefinition.statID);
-        if (alreadyRegistered) {
-            mudMessage(MUDMessagePriority.warning, `Stat Definition with ID ${statDefinition.statID} already registered`);
-        } else {
-            this._statDefinitions.push(statDefinition);
-        }
-    }
-
-    public getStatDefinitions(): MUDStatDefinition[] {
-        // return cloneDeep(this._statDefinitions); // Should this stay clone deep here?  Don't really want to pass ref and potentially break things but....
-        return this._statDefinitions;
-    }
-
-    public getStatDefinitionByID(statDefinitionID: string): MUDStatDefinition {
-        return this._statDefinitions.find(def => def.statID === statDefinitionID);
-    }
-
-    public editStatDefinitionByID(statDefinitionID: string, edits: { displayName?: string; minValue?: number; maxValue?: number }): MUDStatDefinition | null {
-        let stat = this.getStatDefinitionByID(statDefinitionID);
-        if (stat) {
-            stat = { ...stat, ...edits };
-            return stat;
-        } else {
-            mudMessage(MUDMessagePriority.warning, `No stat definition found that matches ID ${statDefinitionID}`);
-            return null;
-        }
-    }
+    // private _ResetObjects() {
+    //     this.StatDefinitions = new MUDStatDefinitionAccessors();
+    //     this.Players = new MUDPlayerAccessors();
+    // }
 
     // Level Accessors
     private _levels: MUDLevel[] = [];
@@ -76,24 +58,24 @@ export class MUDGame {
         return null;
     }
 
-    // Player Accessors
-    private _players: MUDPlayer[] = [];
-
-    public registerPlayer(player: MUDPlayer): void {
-        const alreadyRegistered = this._players.some(p => p.playerID === player.playerID);
-        if (alreadyRegistered) {
-            mudMessage(MUDMessagePriority.warning, `Player with ID ${player.playerID} already registered`);
-        } else {
-            this._players.push(player);
-        }
+    public static Serialize(game: MUDGame): MUDGameSerialized {
+        return {
+            _players: game.Players.getPlayers().map((player) => MUDPlayer.Serialize(player)),
+            _statDefinitions: game.StatDefinitions.getStatDefinitions().map((statDef) => MUDStatDefinition.Serialize(statDef))
+        };
     }
 
-    public getPlayers(): MUDPlayer[] {
-        // return cloneDeep(this._players); // Should this stay clone deep here?  Don't really want to pass ref and potentially break things but....
-        return this._players;
-    }
+    public static Deserialize(serializedGame: MUDGameSerialized): MUDGame {
+        const game = new MUDGame();
 
-    public getPlayerByID(playerID: string): MUDPlayer {
-        return this._players.find(player => player.playerID === playerID);
+        // Set Stat Definitions
+        game.StatDefinitions['_statDefinitions'] = serializedGame._statDefinitions.map((s_statDef) => {
+            return MUDStatDefinition.Deserialize(s_statDef);
+        });
+
+        // SetPlayers
+        game.Players['_players'] = serializedGame._players.map((sPlayer) => MUDPlayer.Deserialize(sPlayer));
+
+        return game;
     }
 }

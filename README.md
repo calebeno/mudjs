@@ -1,4 +1,25 @@
-# Current Phase: Early Development
+     ____________________________________
+    |    _____ _____ ____     __ _____   |
+    |   |     |  |  |    \ __|  |   __|  |
+    |   | | | |  |  |  |  |  |  |__   |  |
+    |   |_|_|_|_____|____/|_____|_____|  |
+    |        ADVENTURE IF YOU DARE!      |
+    | An API For Building MUD-like Games |
+    |        by Caleb Eno ©2021          |
+    |____________________________________|
+
+[![npm version](https://badge.fury.io/js/mudjs.svg)](https://badge.fury.io/js/mudjs)
+[![Build Status](https://travis-ci.com/calebeno/mudjs.svg?branch=master)](https://travis-ci.com/calebeno/mudjs)
+[![Known Vulnerabilities](https://snyk.io/test/github/calebeno/mudjs/badge.svg)](https://snyk.io/test/github/calebeno/mudjs)
+[![Coveralls](https://img.shields.io/coveralls/calebeno/mudjs.svg)](https://coveralls.io/github/calebeno/mudjs)
+<br />
+[![Maintained By](https://img.shields.io/badge/Maintained%20by-Caleb%20Eno-blue.svg)](https://github.com/calebeno)
+[![License](https://img.shields.io/badge/License-MIT-black.svg)](https://github.com/calebeno/mudjs/blob/master/LICENSE)
+<br />
+[![TypeDoc](https://img.shields.io/badge/Docs-TypeDoc-blue.svg)](https://calebeno.github.io/mudjs/)
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+
+## Current Phase: Early Development
 
 Hello!  Thank you for your interest in MudJS. This project is currently undergoing its first phase of early development. MudJS is intended to be an engine of
 sorts for building old-school style dungeon crawlers.
@@ -26,13 +47,6 @@ play like. As development progresses, I will provide a link to the interface sid
 
 I'm really excited about this project!  If you are too, I'd love to hear from you what your favorite dungeon crawlers are.
 
-# MUDJS
-
-[![Build Status](https://travis-ci.com/calebeno/mudjs.svg?branch=master)](https://travis-ci.com/calebeno/mudjs)
-[![Known Vulnerabilities](https://snyk.io/test/github/calebeno/mudjs/badge.svg)](https://snyk.io/test/github/calebeno/mudjs)
-[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![Coveralls](https://img.shields.io/coveralls/calebeno/mudjs.svg)](https://coveralls.io/github/calebeno/mudjs)
-
 [comment]: <> ([![Greenkeeper badge]&#40;https://badges.greenkeeper.io/calebeno/mudjs.svg&#41;]&#40;https://greenkeeper.io/&#41;)
 
 A library for creating old-school dungeon crawlers.
@@ -58,6 +72,8 @@ Generated documentation: [https://calebeno.github.io/mudjs/](https://calebeno.gi
 [comment]: <> (import something from 'mylib/dist/lib/something')
 
 [comment]: <> (```)
+
+## Contributing
 
 ### NPM Scripts
 

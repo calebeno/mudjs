@@ -1,6 +1,7 @@
 import { staticImplements } from '../utility/class-decorators';
-import { Serializable } from '../mudjs.interfaces';
+import { Serializable } from '../interfaces/entity.interfaces';
 import { v4 } from 'uuid';
+import { MUDStatDefinitionSerialized } from "../interfaces/serialized.interfaces";
 
 @staticImplements<Serializable<MUDStatDefinition, MUDStatDefinitionSerialized>>()
 export class MUDStatDefinition {
@@ -30,11 +31,4 @@ export class MUDStatDefinition {
         statDefinition['statID'] = value.statID;
         return statDefinition;
     }
-}
-
-export interface MUDStatDefinitionSerialized {
-    statID: string;
-    displayName: string;
-    minValue: number;
-    maxValue: number;
 }

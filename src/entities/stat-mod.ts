@@ -1,4 +1,4 @@
-import { Serializable } from '../mudjs.interfaces';
+import { Serializable } from '../interfaces/entity.interfaces';
 import { staticImplements } from '../utility/class-decorators';
 
 @staticImplements<Serializable<MUDStatMod, MUDStatModSerialized>>()

@@ -1,7 +1,7 @@
 import { mudMessage, MUDMessagePriority } from '../utility/mud-messenger';
 import { MUDRoom } from './room';
 import { v4 } from 'uuid';
-import { MUDLevelInfo } from '../mudjs.interfaces';
+import { MUDLevelInfo } from '../interfaces/entity.interfaces';
 
 export class MUDLevel {
     private _levelName: string

@@ -1,9 +1,10 @@
 import { v4 } from 'uuid';
-import { MUDStat, MUDStatSerialized } from './stat';
+import { MUDStat } from './stat';
 import { staticImplements } from '../utility/class-decorators';
-import { Serializable } from '../mudjs.interfaces';
+import { Serializable } from '../interfaces/entity.interfaces';
 import { MUDStatDefinition } from './stat-definition';
 import { mudMessage, MUDMessagePriority } from '../utility/mud-messenger';
+import { MUDPlayerSerialized } from "../interfaces/serialized.interfaces";
 
 @staticImplements<Serializable<MUDPlayer, MUDPlayerSerialized>>()
 export class MUDPlayer {
@@ -46,10 +47,4 @@ export class MUDPlayer {
         });
         return player;
     }
-}
-
-export interface MUDPlayerSerialized {
-    playerID: string;
-    playerName: string;
-    stats: MUDStatSerialized[];
 }

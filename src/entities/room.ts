@@ -1,5 +1,5 @@
 import { v4 } from 'uuid';
-import { MUDRoomInfo } from '../mudjs.interfaces';
+import { MUDRoomInfo } from '../interfaces/entity.interfaces';
 
 export class MUDRoom {
     private _roomID: string

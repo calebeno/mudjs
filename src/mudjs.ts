@@ -2,7 +2,9 @@
 // import "core-js/fn/array.find"
 // ...
 import { MUDGame } from './entities/game';
-import { MUDGameConfig } from './mudjs.interfaces';
+import { MUDGameConfig } from './interfaces/entity.interfaces';
+import { MUDGameSerialized } from './interfaces/serialized.interfaces';
+import { ValidateSaveFile } from './utility/validate-save-file';
 
 export class MUD {
     public static MUDConfig: MUDGameConfig
@@ -27,5 +29,15 @@ export class MUD {
             // tslint:disable-next-line
             console.log(titleCard);
         }
+    }
+
+    public static SaveGame(game: MUDGame): MUDGameSerialized {
+        console.log(MUDGame.Serialize(game));
+        return MUDGame.Serialize(game);
+    }
+
+    public static LoadGame(savedGame: MUDGameSerialized): void {
+        ValidateSaveFile(savedGame);
+        MUD.MUDGame = MUDGame.Deserialize(savedGame);
     }
 }

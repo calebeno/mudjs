@@ -1,0 +1,103 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "MUDPlayerSerialized": {
+            "properties": {
+                "playerID": {
+                    "type": "string"
+                },
+                "playerName": {
+                    "type": "string"
+                },
+                "stats": {
+                    "items": {
+                        "$ref": "#/definitions/MUDStatSerialized"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        },
+        "MUDStatDefinitionSerialized": {
+            "properties": {
+                "displayName": {
+                    "type": "string"
+                },
+                "maxValue": {
+                    "type": "number"
+                },
+                "minValue": {
+                    "type": "number"
+                },
+                "statID": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "MUDStatModPhase": {
+            "enum": [
+                "early",
+                "late",
+                "normal"
+            ],
+            "type": "string"
+        },
+        "MUDStatModSerialized": {
+            "properties": {
+                "phase": {
+                    "$ref": "#/definitions/MUDStatModPhase"
+                },
+                "type": {
+                    "$ref": "#/definitions/MUDStatModType"
+                },
+                "value": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "MUDStatModType": {
+            "enum": [
+                "add",
+                "divide",
+                "multiply",
+                "sub"
+            ],
+            "type": "string"
+        },
+        "MUDStatSerialized": {
+            "properties": {
+                "_baseValue": {
+                    "type": "number"
+                },
+                "_mods": {
+                    "items": {
+                        "$ref": "#/definitions/MUDStatModSerialized"
+                    },
+                    "type": "array"
+                },
+                "_statDefinitionID": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    },
+    "properties": {
+        "_players": {
+            "items": {
+                "$ref": "#/definitions/MUDPlayerSerialized"
+            },
+            "type": "array"
+        },
+        "_statDefinitions": {
+            "items": {
+                "$ref": "#/definitions/MUDStatDefinitionSerialized"
+            },
+            "type": "array"
+        }
+    },
+    "type": "object"
+}
+

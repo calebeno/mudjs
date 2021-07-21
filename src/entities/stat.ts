@@ -1,8 +1,10 @@
 import { clamp } from 'lodash';
-import { Serializable } from '../mudjs.interfaces';
-import { MUDStatMod, MUDStatModPhase, MUDStatModSerialized, MUDStatModType } from './stat-mod';
+import { Serializable } from '../interfaces/entity.interfaces';
+import { MUDStatMod, MUDStatModPhase, MUDStatModType } from './stat-mod';
 import { staticImplements } from '../utility/class-decorators';
-import { MUDStatDefinition, MUDStatDefinitionSerialized } from './stat-definition';
+import { MUDStatDefinition } from './stat-definition';
+import { MUD } from "../mudjs";
+import { MUDStatSerialized } from "../interfaces/serialized.interfaces";
 
 @staticImplements<Serializable<MUDStat, MUDStatSerialized>>()
 export class MUDStat {
@@ -61,24 +63,18 @@ export class MUDStat {
 
     public static Serialize(stat: MUDStat): MUDStatSerialized {
         return {
-            _statDefinition: MUDStatDefinition.Serialize(stat._statDefinition),
+            _statDefinitionID: stat._statDefinition.statID,
             _baseValue: stat._baseValue,
             _mods: stat._mods.map(mod => MUDStatMod.Serialize(mod))
         };
     }
 
     public static Deserialize(serializedStat: MUDStatSerialized): MUDStat {
-        const statDefinition = MUDStatDefinition.Deserialize(serializedStat._statDefinition);
+        const statDefinition = MUD.MUDGame.StatDefinitions.getStatDefinitionByID(serializedStat._statDefinitionID);
         const stat = new MUDStat(statDefinition, serializedStat._baseValue);
         stat._mods = serializedStat._mods.map(mod => {
             return MUDStatMod.Deserialize(mod);
         });
         return stat;
     }
-}
-
-export interface MUDStatSerialized {
-    _statDefinition: MUDStatDefinitionSerialized;
-    _baseValue: number;
-    _mods: MUDStatModSerialized[];
 }
